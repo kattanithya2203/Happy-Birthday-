@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,7 +10,7 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 </head>
 
@@ -17,34 +18,49 @@
 <body>
 
 
-<!-- Background Decorations -->
-
-<div class="background">
-
-    <div class="doodle heart">♡</div>
-    <div class="doodle star">✦</div>
-    <div class="doodle heart two">♡</div>
-    <div class="doodle star two">✧</div>
-
-    <div class="leaf leaf1">🍂</div>
-    <div class="leaf leaf2">🍂</div>
-
-    <div class="washi tape1"></div>
-    <div class="washi tape2"></div>
+<audio id="bg-music" loop>
+<source src="barbaad-bgm.mp3" type="audio/mpeg">
+</audio>
 
 
-    <!-- Polaroid Memories -->
 
-    <div class="polaroid top-photo">
-        <img src="photo1.jpg" alt="Memory photo">
-    </div>
-
-    <div class="polaroid bottom-photo">
-        <img src="photo2.jpg" alt="Memory photo">
-    </div>
+<div class="paper-bg">
 
 
+<!-- Fairy lights -->
+
+<div class="fairy-lights">
+<span>•</span><span>•</span><span>•</span><span>•</span><span>•</span>
 </div>
+
+
+
+<!-- Scrapbook decorations -->
+
+<div class="doodle doodle1">♡ ✦</div>
+<div class="doodle doodle2">☆ ♡</div>
+<div class="doodle doodle3">✧ ♥</div>
+
+<div class="leaf leaf1">🍂</div>
+<div class="leaf leaf2">🍂</div>
+
+<div class="washi tape1"></div>
+<div class="washi tape2"></div>
+
+
+<!-- Polaroid memories -->
+
+<div class="polaroid photo1">
+<div class="tape"></div>
+<img src="photo1.jpg" alt="Memory">
+</div>
+
+
+<div class="polaroid photo2">
+<div class="tape"></div>
+<img src="photo2.jpg" alt="Memory">
+</div>
+
 
 
 
@@ -56,18 +72,18 @@
 <div class="envelope">
 
 
-    <div class="envelope-flap"></div>
+<div class="envelope-flap"></div>
 
 
-    <button class="wax-seal" onclick="openEnvelope()">
-        ❤️
-    </button>
+<button class="wax-seal" onclick="openEnvelope()">
+❤️
+</button>
 
 
 </div>
 
 
-<p class="instruction">
+<p class="tap-text">
 Tap to open the envelope
 </p>
 
@@ -83,14 +99,22 @@ Tap to open the envelope
 <section id="card-screen">
 
 
-<div class="birthday-card">
+<div class="card-container">
 
+
+<!-- Front cover -->
 
 <div class="card-front">
+
 
 <h1>
 Happy Birthday Babyy❤️🫂
 </h1>
+
+
+<div class="front-doodles">
+♡ ✦ ♡
+</div>
 
 
 <button class="open-card" onclick="openCard()">
@@ -104,52 +128,72 @@ Tap to open the card
 
 
 
-<div class="card-inside">
+<!-- Inside pages -->
+
+<div class="book-card">
 
 
-<div class="letter">
 
+<div class="page left-page">
 
-<div class="small-hearts">
-♡ ✦ ♡
+<div class="page-doodles">
+♡ ✧
+</div>
+
+<p>
+I still can’t believe I get to do something special for your birthday this time 😋.
+I just want your day to be full of happiness and love.
+</p>
+
 </div>
 
 
-<h2>
-Dear daddy,😂
-</h2>
+
+
+<div class="page right-page">
+
+
+<div class="page-doodles">
+✦ ♡
+</div>
 
 
 <p>
+I'm falling harder ra.. ❤️  
+First time bey, I am loving you a little more every single day and I mean it!!
 
-I still can’t believe I get to do something special for your birthday this time😋.
-I just want your day to be full of happiness and love.
-
-<br><br>
-
-I'm falling harder ra.. first time bey I am loving you a little more every single day and I mean it!!
-
-Nenu nik gurthochina prathisari, just know that I must be listening to you in my gallery.
+Nenu nik gurthochina prathi sari, just know that I must be listening to you in my gallery.
 
 I miss you and I am really sorry.. I hope I'll be the version you deserve one day.
+</p>
 
-<br><br>
 
-Happy 18th kondaa💗 Keep giggling idiott!
+</div>
 
-<br><br>
 
-I love you more than you think I do❤️ and I love you more than you could ever love me😏😂
+
+
+
+<div class="page final-page">
+
+
+<div class="page-doodles">
+♡ ✨
+</div>
+
+
+<p>
+Happy 18th kondaa💗  
+Keep giggling idiott!
+
+I love you more than you think I do ❤️
+and I love you more than you could ever love me 😏😂
 
 </p>
 
 
-<div class="small-hearts">
-♡ ✦ ♡
 </div>
 
-
-</div>
 
 
 </div>
@@ -159,16 +203,6 @@ I love you more than you think I do❤️ and I love you more than you could eve
 
 
 </section>
-
-
-
-
-
-<!-- Music -->
-
-<audio id="bg-music" loop>
-<source src="barbaad-bgm.mp3" type="audio/mpeg">
-</audio>
 
 
 
