@@ -1,15 +1,38 @@
-function openEnvelope() {
+function openEnvelope(){
 
-document.getElementById("envelope-section").style.display = "none";
+    // start music
+    const music = document.getElementById("bg-music");
 
-document.getElementById("card-section").style.display = "flex";
+    if(music){
+        music.play();
+    }
+
+
+    // hide envelope screen
+    const envelopeScreen = document.getElementById("envelope-screen");
+
+    envelopeScreen.style.display = "none";
+
+
+    // show card
+    const cardScreen = document.getElementById("card-screen");
+
+    cardScreen.style.display = "flex";
 
 }
 
-function openCard() {
 
-document.querySelector(".front").style.display = "none";
 
-document.querySelector(".inside").style.display = "block";
+
+function openCard(){
+
+    const front = document.querySelector(".card-front");
+
+    const inside = document.querySelector(".card-inside");
+
+
+    front.style.display = "none";
+
+    inside.style.display = "block";
 
 }
