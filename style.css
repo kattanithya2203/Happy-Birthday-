@@ -4,323 +4,428 @@ padding:0;
 box-sizing:border-box;
 }
 
+
 body{
+
 font-family:'Poppins',sans-serif;
-background:#f6f0e7;
+
+background:#f5eee4;
+
+color:#4b3b32;
+
 overflow-x:hidden;
-color:#4b3d32;
+
 }
 
 
-/* Scrapbook Background */
 
-.background-doodles{
+/* Background */
+
+.background{
+
 position:fixed;
-width:100%;
-height:100%;
-top:0;
-left:0;
-pointer-events:none;
+
+inset:0;
+
+z-index:-1;
 
 background:
-radial-gradient(circle at 15% 20%, rgba(255,255,255,.5) 0 40px, transparent 41px),
-radial-gradient(circle at 80% 70%, rgba(255,255,255,.4) 0 30px, transparent 31px);
+
+radial-gradient(circle at 20% 20%,rgba(255,255,255,.8),transparent 25%),
+
+radial-gradient(circle at 80% 80%,rgba(255,255,255,.7),transparent 30%);
+
 }
 
 
-.heart,
-.heart2,
-.star,
-.leaf,
-.flower{
+
+.doodle{
+
 position:absolute;
-font-size:28px;
-opacity:.35;
-animation:float 6s ease-in-out infinite;
-}
 
-.heart{top:10%;left:8%;}
-.star{top:18%;right:10%;}
-.leaf{bottom:12%;left:12%;}
-.flower{bottom:18%;right:12%;}
-.heart2{top:70%;right:20%;}
+font-size:35px;
 
-
-@keyframes float{
-
-0%,100%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-15px);
-}
+opacity:.5;
 
 }
+
+
+
+.heart{
+
+top:8%;
+
+left:8%;
+
+}
+
+
+
+.heart.two{
+
+bottom:20%;
+
+right:10%;
+
+}
+
+
+
+.star{
+
+top:15%;
+
+right:12%;
+
+}
+
+
+
+.star.two{
+
+bottom:15%;
+
+left:15%;
+
+}
+
+
+
+.leaf{
+
+position:absolute;
+
+font-size:45px;
+
+opacity:.5;
+
+}
+
+
+
+.leaf1{
+
+top:35%;
+
+left:5%;
+
+}
+
+
+
+.leaf2{
+
+bottom:30%;
+
+right:5%;
+
+}
+
+
+
+/* Washi tape */
+
+.washi{
+
+position:absolute;
+
+width:90px;
+
+height:25px;
+
+background:#e8cfc0;
+
+opacity:.6;
+
+}
+
+
+
+.tape1{
+
+top:10%;
+
+right:25%;
+
+transform:rotate(-20deg);
+
+}
+
+
+
+.tape2{
+
+bottom:15%;
+
+left:25%;
+
+transform:rotate(15deg);
+
+}
+
+
+
+
+
+/* Polaroids */
+
+.polaroid{
+
+position:absolute;
+
+width:120px;
+
+background:white;
+
+padding:10px 10px 25px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+
+
+.polaroid img{
+
+width:100%;
+
+height:120px;
+
+object-fit:cover;
+
+}
+
+
+
+.top-photo{
+
+top:8%;
+
+right:5%;
+
+transform:rotate(12deg);
+
+}
+
+
+
+.bottom-photo{
+
+bottom:8%;
+
+left:5%;
+
+transform:rotate(-12deg);
+
+}
+
+
+
+
 
 
 /* Envelope */
 
-#envelope-section{
+#envelope-screen{
 
 height:100vh;
+
 display:flex;
+
 justify-content:center;
+
 align-items:center;
 
-}
-
-
-.envelope-container{
-
-text-align:center;
+flex-direction:column;
 
 }
+
 
 
 .envelope{
 
-width:340px;
-height:220px;
+width:320px;
 
-background:#fff3df;
+height:210px;
+
+background:white;
 
 border-radius:12px;
 
 position:relative;
 
-box-shadow:
-0 20px 40px rgba(0,0,0,.15);
-
-overflow:hidden;
+box-shadow:0 20px 40px rgba(0,0,0,.18);
 
 animation:bounce 2s infinite;
+
+overflow:hidden;
 
 }
 
 
-/* Envelope flap */
 
-.flap{
+@keyframes bounce{
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+
+
+.envelope-flap{
 
 position:absolute;
 
 top:0;
-left:0;
 
 width:0;
+
 height:0;
 
-border-left:170px solid transparent;
-border-right:170px solid transparent;
-border-top:120px solid #efd2a5;
+border-left:160px solid transparent;
+
+border-right:160px solid transparent;
+
+border-top:110px solid #f0dfcd;
 
 }
 
 
 
-/* Wax seal */
-
-.seal{
+.wax-seal{
 
 position:absolute;
 
-top:75px;
+top:65px;
+
 left:50%;
 
 transform:translateX(-50%);
 
-width:75px;
 height:75px;
+
+width:75px;
 
 border-radius:50%;
 
-background:#c94f5b;
-
-color:white;
-
 border:none;
 
-font-size:32px;
+background:#c83245;
 
-display:flex;
-justify-content:center;
-align-items:center;
+font-size:35px;
 
 cursor:pointer;
 
-box-shadow:
-0 6px 12px rgba(0,0,0,.25);
-
-z-index:2;
-
-transition:.3s;
-
-}
-
-
-.seal:hover{
-
-transform:translateX(-50%) scale(1.1);
+box-shadow:0 5px 15px rgba(0,0,0,.3);
 
 }
 
 
 
-.tap{
+.instruction{
 
 margin-top:30px;
 
 font-size:18px;
 
-font-weight:400;
-
 }
 
-
-@keyframes bounce{
-
-0%,100%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-12px);
-}
-
-}
 
 
 
 /* Card */
 
-#card-section{
+#card-screen{
 
 display:none;
+
+height:100vh;
 
 justify-content:center;
 
 align-items:center;
 
-padding:50px;
-
 }
 
 
-.card{
 
-width:90%;
+.birthday-card{
 
-max-width:850px;
+width:85%;
+
+max-width:600px;
 
 background:white;
 
-border-radius:20px;
+border-radius:15px;
 
-box-shadow:0 15px 40px rgba(0,0,0,.15);
+box-shadow:0 20px 40px rgba(0,0,0,.2);
 
 overflow:hidden;
 
-animation:pop .7s;
-
-}
-
-
-@keyframes pop{
-
-from{
-transform:translateY(120px);
-opacity:0;
-}
-
-to{
-transform:translateY(0);
-opacity:1;
-}
-
 }
 
 
 
-.front{
+.card-front{
 
-padding:45px;
+height:400px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
 
 text-align:center;
 
 }
 
 
-.front h1{
+
+.card-front h1{
 
 font-family:'Caveat',cursive;
 
-font-size:55px;
-
-margin-bottom:15px;
-
-}
-
-
-.front p{
-
-margin-bottom:30px;
-
-font-size:18px;
+font-size:50px;
 
 }
 
 
 
-button{
+.open-card{
 
-background:#d89c7b;
+margin-top:250px;
 
-color:white;
+background:none;
 
 border:none;
 
-padding:15px 35px;
+font-size:12px;
 
-border-radius:30px;
-
-font-size:17px;
+color:#8b6b58;
 
 cursor:pointer;
 
-transition:.3s;
-
-}
-
-
-button:hover{
-
-transform:scale(1.05);
-
-background:#c98865;
-
 }
 
 
 
-.inside{
+
+
+.card-inside{
 
 display:none;
 
-padding:45px;
+padding:40px;
 
-background:#fffdf9;
-
-}
-
-
-.inside h2{
-
-font-family:'Caveat',cursive;
-
-font-size:42px;
-
-margin-bottom:20px;
+background:#fffaf3;
 
 }
 
@@ -328,58 +433,74 @@ margin-bottom:20px;
 
 .letter{
 
-height:500px;
+background:white;
 
-overflow:auto;
-
-padding:25px;
+padding:30px;
 
 border-radius:15px;
 
-background:#faf5ee;
+font-size:17px;
 
-line-height:1.9;
+line-height:1.8;
 
-font-size:18px;
-
-box-shadow:inset 0 0 10px rgba(0,0,0,.08);
+box-shadow:0 0 15px rgba(0,0,0,.08);
 
 }
 
 
 
-/* Mobile */
+.letter h2{
 
-@media(max-width:768px){
+font-family:'Caveat',cursive;
 
-.front h1{
-
-font-size:42px;
+font-size:35px;
 
 }
 
 
-.letter{
 
-height:420px;
+
+.small-hearts{
+
+text-align:center;
+
+font-size:25px;
 
 }
 
+
+
+
+
+@media(max-width:600px){
 
 .envelope{
 
 width:280px;
+
 height:180px;
 
 }
 
 
-.flap{
+.card-front h1{
 
-border-left-width:140px;
-border-right-width:140px;
+font-size:38px;
 
 }
 
+
+.polaroid{
+
+width:90px;
+
+}
+
+
+.polaroid img{
+
+height:90px;
+
+}
 
 }
