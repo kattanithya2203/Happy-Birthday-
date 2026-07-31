@@ -4,262 +4,235 @@ padding:0;
 box-sizing:border-box;
 }
 
-
 body{
-
 font-family:'Poppins',sans-serif;
-
-background:#f5eee4;
-
-color:#4b3b32;
-
 overflow-x:hidden;
-
+color:#4b3a32;
 }
 
 
+.paper-bg{
+min-height:100vh;
+background:#f5eadb;
+position:relative;
+overflow:hidden;
+padding:20px;
+}
 
-/* Background */
 
-.background{
+/* paper texture */
 
-position:fixed;
-
+.paper-bg:before{
+content:"";
+position:absolute;
 inset:0;
-
-z-index:-1;
-
 background:
-
-radial-gradient(circle at 20% 20%,rgba(255,255,255,.8),transparent 25%),
-
-radial-gradient(circle at 80% 80%,rgba(255,255,255,.7),transparent 30%);
-
+radial-gradient(circle,rgba(255,255,255,.5) 1px,transparent 2px);
+background-size:18px 18px;
+opacity:.4;
 }
 
 
+
+/* fairy lights */
+
+.fairy-lights{
+position:absolute;
+top:10px;
+left:5%;
+right:5%;
+display:flex;
+justify-content:space-around;
+font-size:35px;
+color:#ffd66b;
+filter:drop-shadow(0 0 10px #ffc857);
+z-index:2;
+}
+
+.fairy-lights span{
+animation:glow 1.8s infinite alternate;
+}
+
+
+@keyframes glow{
+from{
+opacity:.5;
+}
+
+to{
+opacity:1;
+}
+}
+
+
+
+/* doodles */
 
 .doodle{
-
 position:absolute;
-
 font-size:35px;
-
-opacity:.5;
-
+font-family:'Caveat';
+color:#c78f83;
 }
 
-
-
-.heart{
-
-top:8%;
-
-left:8%;
-
-}
-
-
-
-.heart.two{
-
-bottom:20%;
-
-right:10%;
-
-}
-
-
-
-.star{
-
+.doodle1{
 top:15%;
-
-right:12%;
-
+left:5%;
 }
 
+.doodle2{
+right:5%;
+top:30%;
+}
 
-
-.star.two{
-
+.doodle3{
 bottom:15%;
-
-left:15%;
-
+left:10%;
 }
-
 
 
 .leaf{
-
 position:absolute;
-
 font-size:45px;
-
-opacity:.5;
-
 }
-
 
 
 .leaf1{
-
-top:35%;
-
-left:5%;
-
+top:25%;
+right:8%;
 }
-
-
 
 .leaf2{
-
-bottom:30%;
-
-right:5%;
-
+bottom:10%;
+left:5%;
 }
 
 
 
-/* Washi tape */
+/* washi tapes */
 
 .washi{
-
 position:absolute;
-
-width:90px;
-
-height:25px;
-
-background:#e8cfc0;
-
-opacity:.6;
-
+width:100px;
+height:30px;
+background:#e8c8b8;
+opacity:.8;
+transform:rotate(-20deg);
 }
-
 
 
 .tape1{
-
-top:10%;
-
-right:25%;
-
-transform:rotate(-20deg);
-
+top:20%;
+left:15%;
 }
-
-
 
 .tape2{
-
-bottom:15%;
-
-left:25%;
-
-transform:rotate(15deg);
-
+bottom:25%;
+right:10%;
 }
 
 
 
 
 
-/* Polaroids */
+/* polaroids */
 
 .polaroid{
-
 position:absolute;
-
-width:120px;
-
 background:white;
-
-padding:10px 10px 25px;
-
-box-shadow:0 8px 20px rgba(0,0,0,.15);
-
+padding:12px;
+width:150px;
+height:180px;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+z-index:3;
 }
-
 
 
 .polaroid img{
-
 width:100%;
-
-height:120px;
-
+height:130px;
 object-fit:cover;
-
 }
 
 
-
-.top-photo{
-
-top:8%;
-
-right:5%;
-
-transform:rotate(12deg);
-
-}
-
-
-
-.bottom-photo{
-
-bottom:8%;
-
+.photo1{
+top:25%;
 left:5%;
-
 transform:rotate(-12deg);
+}
 
+
+.photo2{
+bottom:20%;
+right:5%;
+transform:rotate(12deg);
+}
+
+
+.tape{
+position:absolute;
+top:-15px;
+left:35px;
+width:80px;
+height:25px;
+background:#e8d0a8;
 }
 
 
 
 
 
-
-/* Envelope */
+/* envelope */
 
 #envelope-screen{
-
 height:100vh;
-
 display:flex;
-
-justify-content:center;
-
-align-items:center;
-
 flex-direction:column;
-
+justify-content:center;
+align-items:center;
+position:relative;
+z-index:5;
 }
-
 
 
 .envelope{
-
-width:320px;
-
-height:210px;
-
+width:300px;
+height:190px;
 background:white;
-
-border-radius:12px;
-
+border-radius:15px;
 position:relative;
-
-box-shadow:0 20px 40px rgba(0,0,0,.18);
-
+box-shadow:0 20px 40px rgba(0,0,0,.15);
 animation:bounce 2s infinite;
+}
 
-overflow:hidden;
 
+.envelope-flap{
+position:absolute;
+top:0;
+left:0;
+width:0;
+height:0;
+border-left:150px solid transparent;
+border-right:150px solid transparent;
+border-top:100px solid white;
+z-index:2;
+}
+
+
+.wax-seal{
+position:absolute;
+top:65px;
+left:50%;
+transform:translateX(-50%);
+width:65px;
+height:65px;
+border-radius:50%;
+background:#c9363e;
+border:none;
+color:white;
+font-size:28px;
+cursor:pointer;
+z-index:5;
 }
 
 
@@ -267,240 +240,108 @@ overflow:hidden;
 @keyframes bounce{
 
 50%{
-
 transform:translateY(-12px);
-
 }
 
 }
 
 
 
-.envelope-flap{
-
-position:absolute;
-
-top:0;
-
-width:0;
-
-height:0;
-
-border-left:160px solid transparent;
-
-border-right:160px solid transparent;
-
-border-top:110px solid #f0dfcd;
-
-}
 
 
-
-.wax-seal{
-
-position:absolute;
-
-top:65px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-height:75px;
-
-width:75px;
-
-border-radius:50%;
-
-border:none;
-
-background:#c83245;
-
-font-size:35px;
-
-cursor:pointer;
-
-box-shadow:0 5px 15px rgba(0,0,0,.3);
-
-}
-
-
-
-.instruction{
-
-margin-top:30px;
-
-font-size:18px;
-
+.tap-text{
+margin-top:25px;
+font-size:15px;
 }
 
 
 
 
-/* Card */
+
+/* card */
 
 #card-screen{
-
 display:none;
-
-height:100vh;
-
+min-height:100vh;
 justify-content:center;
-
 align-items:center;
+z-index:5;
+position:relative;
+}
 
+
+.card-container{
+width:90%;
+max-width:380px;
 }
 
 
 
-.birthday-card{
-
-width:85%;
-
-max-width:600px;
-
+.card-front,
+.page{
 background:white;
-
 border-radius:15px;
-
-box-shadow:0 20px 40px rgba(0,0,0,.2);
-
-overflow:hidden;
-
-}
-
-
-
-.card-front{
-
-height:400px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-flex-direction:column;
-
+padding:35px;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
 text-align:center;
-
 }
 
 
 
 .card-front h1{
-
-font-family:'Caveat',cursive;
-
-font-size:50px;
-
+font-family:'Caveat';
+font-size:45px;
 }
-
 
 
 .open-card{
-
-margin-top:250px;
-
-background:none;
-
+margin-top:30px;
+padding:12px 25px;
 border:none;
-
-font-size:12px;
-
-color:#8b6b58;
-
-cursor:pointer;
-
+border-radius:25px;
+background:#d98b7b;
+color:white;
 }
 
 
 
 
-
-.card-inside{
-
+.book-card{
 display:none;
-
-padding:40px;
-
-background:#fffaf3;
-
 }
 
 
-
-.letter{
-
-background:white;
-
-padding:30px;
-
-border-radius:15px;
-
+.page{
+min-height:450px;
+margin-top:20px;
 font-size:17px;
-
 line-height:1.8;
-
-box-shadow:0 0 15px rgba(0,0,0,.08);
-
 }
 
 
-
-.letter h2{
-
-font-family:'Caveat',cursive;
-
-font-size:35px;
-
-}
-
-
-
-
-.small-hearts{
-
-text-align:center;
-
+.page-doodles{
 font-size:25px;
-
+margin-bottom:20px;
+color:#d88;
 }
-
-
 
 
 
 @media(max-width:600px){
 
 .envelope{
-
-width:280px;
-
-height:180px;
-
+width:270px;
+height:170px;
 }
 
-
 .card-front h1{
-
 font-size:38px;
-
 }
 
 
 .polaroid{
-
-width:90px;
-
-}
-
-
-.polaroid img{
-
-height:90px;
-
+width:120px;
+height:150px;
 }
 
 }
