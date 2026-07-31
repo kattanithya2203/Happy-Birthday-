@@ -5,73 +5,96 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Happy Birthday ❤️</title>
+<title>Happy Birthday Babyy ❤️</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 </head>
 
+
 <body>
 
-<div class="background-doodles">
-    <div class="heart">❤</div>
-    <div class="star">★</div>
-    <div class="heart2">❤</div>
-    <div class="leaf">🍂</div>
-    <div class="flower">🌼</div>
-</div>
+
+<!-- Background Decorations -->
+
+<div class="background">
+
+    <div class="doodle heart">♡</div>
+    <div class="doodle star">✦</div>
+    <div class="doodle heart two">♡</div>
+    <div class="doodle star two">✧</div>
+
+    <div class="leaf leaf1">🍂</div>
+    <div class="leaf leaf2">🍂</div>
+
+    <div class="washi tape1"></div>
+    <div class="washi tape2"></div>
 
 
-<!-- ENVELOPE SECTION -->
+    <!-- Polaroid Memories -->
 
-<section id="envelope-section">
-
-<div class="envelope-container">
-
-    <div class="envelope bounce">
-
-        <div class="flap"></div>
-
-        <button class="seal" onclick="openEnvelope()">
-            ❤
-        </button>
-
+    <div class="polaroid top-photo">
+        <img src="photo1.jpg" alt="Memory photo">
     </div>
 
-    <p class="tap">
-        Tap the ❤ to open your surprise!
-    </p>
+    <div class="polaroid bottom-photo">
+        <img src="photo2.jpg" alt="Memory photo">
+    </div>
+
 
 </div>
+
+
+
+<!-- Envelope -->
+
+<section id="envelope-screen">
+
+
+<div class="envelope">
+
+
+    <div class="envelope-flap"></div>
+
+
+    <button class="wax-seal" onclick="openEnvelope()">
+        ❤️
+    </button>
+
+
+</div>
+
+
+<p class="instruction">
+Tap to open the envelope
+</p>
+
 
 </section>
 
 
 
-<!-- CARD SECTION -->
-
-<section id="card-section">
-
-<div class="card">
 
 
-<div class="front">
+<!-- Card -->
+
+<section id="card-screen">
+
+
+<div class="birthday-card">
+
+
+<div class="card-front">
 
 <h1>
-Happy Birthday, Ashrith ❤️
+Happy Birthday Babyy❤️🫂
 </h1>
 
 
-<p>
-I made something special just for you...
-</p>
-
-
-<button onclick="openCard()">
-Open Card
+<button class="open-card" onclick="openCard()">
+Tap to open the card
 </button>
 
 
@@ -79,38 +102,50 @@ Open Card
 
 
 
-<div class="inside">
 
 
-<h2>
-My Letter 💌
-</h2>
+<div class="card-inside">
 
 
 <div class="letter">
 
+
+<div class="small-hearts">
+♡ ✦ ♡
+</div>
+
+
+<h2>
+Dear daddy,😂
+</h2>
+
+
 <p>
 
-Dear Ashrith ❤️,
+I still can’t believe I get to do something special for your birthday this time😋.
+I just want your day to be full of happiness and love.
 
 <br><br>
 
-This is where your entire birthday letter will go.
+I'm falling harder ra.. first time bey I am loving you a little more every single day and I mean it!!
+
+Nenu nik gurthochina prathisari, just know that I must be listening to you in my gallery.
+
+I miss you and I am really sorry.. I hope I'll be the version you deserve one day.
 
 <br><br>
 
-You can write hundreds of lines here.
+Happy 18th kondaa💗 Keep giggling idiott!
 
 <br><br>
 
-Emojis like ❤️🥹✨🎂🎉💌🌼 are fully supported.
-
-<br><br>
-
-Replace this paragraph with your own heartfelt message.
+I love you more than you think I do❤️ and I love you more than you could ever love me😏😂
 
 </p>
 
+
+<div class="small-hearts">
+♡ ✦ ♡
 </div>
 
 
@@ -118,8 +153,23 @@ Replace this paragraph with your own heartfelt message.
 
 
 </div>
+
+
+</div>
+
 
 </section>
+
+
+
+
+
+<!-- Music -->
+
+<audio id="bg-music" loop>
+<source src="barbaad-bgm.mp3" type="audio/mpeg">
+</audio>
+
 
 
 
