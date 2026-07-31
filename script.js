@@ -1,23 +1,25 @@
 function openEnvelope(){
 
-    // start music
+    // Play music
     const music = document.getElementById("bg-music");
 
     if(music){
-        music.play();
+        music.play().catch(() => {
+            console.log("Music needs user interaction");
+        });
     }
 
 
-    // hide envelope screen
-    const envelopeScreen = document.getElementById("envelope-screen");
+    // hide envelope
+    const envelope = document.getElementById("envelope-screen");
 
-    envelopeScreen.style.display = "none";
+    envelope.style.display = "none";
 
 
     // show card
-    const cardScreen = document.getElementById("card-screen");
+    const card = document.getElementById("card-screen");
 
-    cardScreen.style.display = "flex";
+    card.style.display = "flex";
 
 }
 
@@ -28,11 +30,15 @@ function openCard(){
 
     const front = document.querySelector(".card-front");
 
-    const inside = document.querySelector(".card-inside");
+    const pages = document.querySelector(".book-card");
 
 
+    // hide front cover
     front.style.display = "none";
 
-    inside.style.display = "block";
+
+    // show inside pages
+    pages.style.display = "block";
+
 
 }
