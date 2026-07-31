@@ -11,7 +11,8 @@ overflow-x:hidden;
 color:#4b3d32;
 }
 
-/* Beige Scrapbook Background */
+
+/* Scrapbook Background */
 
 .background-doodles{
 position:fixed;
@@ -20,10 +21,12 @@ height:100%;
 top:0;
 left:0;
 pointer-events:none;
+
 background:
 radial-gradient(circle at 15% 20%, rgba(255,255,255,.5) 0 40px, transparent 41px),
 radial-gradient(circle at 80% 70%, rgba(255,255,255,.4) 0 30px, transparent 31px);
 }
+
 
 .heart,
 .heart2,
@@ -42,168 +45,341 @@ animation:float 6s ease-in-out infinite;
 .flower{bottom:18%;right:12%;}
 .heart2{top:70%;right:20%;}
 
+
 @keyframes float{
+
 0%,100%{
 transform:translateY(0);
 }
+
 50%{
 transform:translateY(-15px);
 }
+
 }
+
 
 /* Envelope */
 
 #envelope-section{
+
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
+
 }
 
+
+.envelope-container{
+
+text-align:center;
+
+}
+
+
 .envelope{
-width:320px;
-height:210px;
-background:#fffaf5;
+
+width:340px;
+height:220px;
+
+background:#fff3df;
+
 border-radius:12px;
-box-shadow:0 20px 40px rgba(0,0,0,.12);
+
 position:relative;
+
+box-shadow:
+0 20px 40px rgba(0,0,0,.15);
+
+overflow:hidden;
+
+animation:bounce 2s infinite;
+
+}
+
+
+/* Envelope flap */
+
+.flap{
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:0;
+height:0;
+
+border-left:170px solid transparent;
+border-right:170px solid transparent;
+border-top:120px solid #efd2a5;
+
+}
+
+
+
+/* Wax seal */
+
+.seal{
+
+position:absolute;
+
+top:75px;
+left:50%;
+
+transform:translateX(-50%);
+
+width:75px;
+height:75px;
+
+border-radius:50%;
+
+background:#c94f5b;
+
+color:white;
+
+border:none;
+
+font-size:32px;
+
 display:flex;
 justify-content:center;
 align-items:center;
-flex-direction:column;
-animation:bounce 2s infinite;
+
+cursor:pointer;
+
+box-shadow:
+0 6px 12px rgba(0,0,0,.25);
+
+z-index:2;
+
+transition:.3s;
+
 }
 
+
+.seal:hover{
+
+transform:translateX(-50%) scale(1.1);
+
+}
+
+
+
+.tap{
+
+margin-top:30px;
+
+font-size:18px;
+
+font-weight:400;
+
+}
+
+
 @keyframes bounce{
+
 0%,100%{
 transform:translateY(0);
 }
+
 50%{
-transform:translateY(-10px);
-}
-}
-
-.seal{
-width:65px;
-height:65px;
-border-radius:50%;
-background:#d86c74;
-color:white;
-font-size:28px;
-display:flex;
-justify-content:center;
-align-items:center;
-cursor:pointer;
-transition:.3s;
+transform:translateY(-12px);
 }
 
-.seal:hover{
-transform:scale(1.1);
 }
 
-.tap{
-margin-top:20px;
-font-size:16px;
-}
+
 
 /* Card */
 
 #card-section{
+
 display:none;
+
 justify-content:center;
+
 align-items:center;
+
 padding:50px;
+
 }
+
 
 .card{
+
 width:90%;
+
 max-width:850px;
+
 background:white;
+
 border-radius:20px;
+
 box-shadow:0 15px 40px rgba(0,0,0,.15);
+
 overflow:hidden;
+
 animation:pop .7s;
+
 }
 
+
 @keyframes pop{
+
 from{
 transform:translateY(120px);
 opacity:0;
 }
+
 to{
 transform:translateY(0);
 opacity:1;
 }
+
 }
+
+
 
 .front{
+
 padding:45px;
+
 text-align:center;
+
 }
+
 
 .front h1{
+
 font-family:'Caveat',cursive;
+
 font-size:55px;
+
 margin-bottom:15px;
+
 }
+
 
 .front p{
+
 margin-bottom:30px;
+
 font-size:18px;
+
 }
+
+
 
 button{
+
 background:#d89c7b;
+
 color:white;
+
 border:none;
+
 padding:15px 35px;
+
 border-radius:30px;
+
 font-size:17px;
+
 cursor:pointer;
+
 transition:.3s;
+
 }
+
 
 button:hover{
+
 transform:scale(1.05);
+
 background:#c98865;
+
 }
+
+
 
 .inside{
+
 display:none;
+
 padding:45px;
+
 background:#fffdf9;
+
 }
+
 
 .inside h2{
+
 font-family:'Caveat',cursive;
+
 font-size:42px;
+
 margin-bottom:20px;
+
 }
 
+
+
 .letter{
+
 height:500px;
+
 overflow:auto;
+
 padding:25px;
+
 border-radius:15px;
+
 background:#faf5ee;
+
 line-height:1.9;
+
 font-size:18px;
+
 box-shadow:inset 0 0 10px rgba(0,0,0,.08);
+
 }
+
+
+
+/* Mobile */
 
 @media(max-width:768px){
 
 .front h1{
+
 font-size:42px;
+
 }
+
 
 .letter{
+
 height:420px;
+
 }
 
+
 .envelope{
+
 width:280px;
 height:180px;
+
 }
+
+
+.flap{
+
+border-left-width:140px;
+border-right-width:140px;
+
+}
+
 
 }
