@@ -17,139 +17,109 @@
 
 <body>
 
+
 <audio id="bg-music" loop>
-    <source src="barbaad-bgm.MP3" type="audio/mpeg">
+<source src="barbaad-bgm.mp3" type="audio/mpeg">
 </audio>
+
 
 
 <div class="paper-bg">
 
 
-<div class="decorations">
+<!-- Fairy lights -->
 
-    <div class="fairy-lights">
-        <span>•</span>
-        <span>•</span>
-        <span>•</span>
-        <span>•</span>
-        <span>•</span>
-    </div>
-
-
-    <div class="doodle doodle1">♡ ✦</div>
-    <div class="doodle doodle2">☆ ♡</div>
-    <div class="doodle doodle3">✧ ♥</div>
-
-
-    <div class="leaf leaf1">🍂</div>
-    <div class="leaf leaf2">🍂</div>
-
-
-    <div class="tape tape1"></div>
-    <div class="tape tape2"></div>
-
-
-    <div class="polaroid photo1">
-        <div class="photo-tape"></div>
-        <img src="photo1.jpg">
-    </div>
-
-
-    <div class="polaroid photo2">
-        <div class="photo-tape"></div>
-        <img src="photo2.jpg">
-    </div>
-
+<div class="fairy-lights">
+<span>•</span><span>•</span><span>•</span><span>•</span><span>•</span>
 </div>
 
 
 
-<section id="scene">
+<!-- Scrapbook decorations -->
+
+<div class="doodle doodle1">♡ ✦</div>
+<div class="doodle doodle2">☆ ♡</div>
+<div class="doodle doodle3">✧ ♥</div>
+
+<div class="leaf leaf1">🍂</div>
+<div class="leaf leaf2">🍂</div>
+
+<div class="washi tape1"></div>
+<div class="washi tape2"></div>
 
 
-<!-- ENVELOPE -->
+<!-- Polaroid memories -->
 
-<div class="envelope-wrap">
-
-    <div class="envelope">
-
-        <div class="envelope-back"></div>
-
-        <div class="envelope-flap"></div>
-
-        <button class="wax-seal" onclick="openEnvelope()">
-            ❤️
-        </button>
-
-    </div>
+<div class="polaroid photo1">
+<div class="tape"></div>
+<img src="photo1.jpg" alt="Memory">
+</div>
 
 
-    <p class="tap-text">
-        Tap to open the envelope
-    </p>
-
+<div class="polaroid photo2">
+<div class="tape"></div>
+<img src="photo2.jpg" alt="Memory">
 </div>
 
 
 
 
+<!-- Envelope -->
 
-<!-- CARD -->
+<section id="envelope-screen">
 
-<div class="letter-wrap">
+
+<div class="envelope">
+
+
+<div class="envelope-flap"></div>
+
+
+<button class="wax-seal" onclick="openEnvelope()">
+❤️
+</button>
+
+
+</div>
+
+
+<p class="tap-text">
+Tap to open the envelope
+</p>
+
+
+</section>
+
+
+
+
+
+<!-- Card -->
+
+<section id="card-screen">
 
 
 <div class="card-container">
 
 
+<!-- Front cover -->
 
-<!-- PANEL 1 -->
-
-<div class="panel panel-1">
-
-
-    <!-- FRONT COVER -->
-
-    <div class="panel-face front-face">
-
-        <h1>
-            Happy Birthday Babyy ❤️🫂
-        </h1>
+<div class="card-front">
 
 
-        <div class="front-doodles">
-            ♡ ✦ ♡
-        </div>
+<h1>
+Happy Birthday Babyy❤️🫂
+</h1>
 
 
-        <button class="open-card" onclick="openCard()">
-            Tap to open
-        </button>
-
-    </div>
+<div class="front-doodles">
+♡ ✦ ♡
+</div>
 
 
-
-    <!-- INSIDE OF PANEL 1 -->
-
-    <div class="panel-face inside-face">
-
-        <div class="page-doodles">
-            ♡ ✧
-        </div>
-
-
-        <h2 class="letter-title">
-            Dear Daddy 😂,
-        </h2>
-
-
-        <p>
-            I still can't believe I get to do something special for your birthday this time 😋.
-            I just want your day to be full of happiness and love.
-        </p>
-
-    </div>
+<button class="open-card" onclick="openCard()">
+Tap to open the card
+</button>
 
 
 </div>
@@ -158,28 +128,48 @@
 
 
 
-<!-- PANEL 2 -->
+<!-- Inside pages -->
 
-<div class="panel panel-2">
-
-    <div class="page-doodles">
-        ♡ ✧
-    </div>
+<div class="book-card">
 
 
-    <p>
 
-        I'm falling harder ra.. First time bey, I am loving you a little more every single day and I mean it!!
+<div class="page left-page">
 
-        <br><br>
+<div class="page-doodles">
+♡ ✧
+</div>
 
-        Nenu nik gurthochina prathi sari, just know that I must be listening to you in my gallery.
+<p>
+     Dear Daddy😂
+    
+    
+    I still can’t believe I get to do something special for your birthday this time 😋.
+I just want your day to be full of happiness and love.
+</p>
 
-        <br><br>
+</div>
 
-        I miss you and I am really sorry.. I hope I'll be the version you deserve one day.
 
-    </p>
+
+
+<div class="page right-page">
+
+
+<div class="page-doodles">
+✦ ♡
+</div>
+
+
+<p>
+I'm falling harder ra.. ❤️  
+First time bey, I am loving you a little more every single day and I mean it!!
+
+Nenu nik gurthochina prathi sari, just know that I must be listening to you in my gallery.
+
+I miss you and I am really sorry.. I hope I'll be the version you deserve one day.
+</p>
+
 
 </div>
 
@@ -187,49 +177,26 @@
 
 
 
-<!-- PANEL 3 -->
-
-<div class="panel panel-3">
+<div class="page final-page">
 
 
-    <div class="page-doodles">
-        ♡ ✨
-    </div>
+<div class="page-doodles">
+♡ ✨
+</div>
 
 
-    <p>
+<p>
+Happy 18th kondaa💗  
+Keep giggling idiott!
 
-        Happy 18th kondaa💗
+I love you more than you think I do ❤️
+and I love you more than you could ever love me 😏😂 
+You'll always be my shooting star and my snowflake ☄️❄️
 
-        <br><br>
+    To my Ashrith💝
+    -Pinkyy🐽
 
-        Keep giggling idiott!
-
-        <br><br>
-
-        I love you more than you think I do ❤️
-
-        <br><br>
-
-        And I love you more than you could ever love me. 😏😂
-
-        <br><br>
-
-        You'll always be my shooting star ☄️
-        and my snowflake ❄️.
-
-    </p>
-
-
-    <div class="letter-signature">
-
-        To my Ashrith 💝
-
-        <br>
-
-        — Pinkyy 🐽
-
-    </div>
+</p>
 
 
 </div>
@@ -237,6 +204,7 @@
 
 
 </div>
+
 
 </div>
 
@@ -244,10 +212,10 @@
 </section>
 
 
-</div>
 
 
 <script src="script.js"></script>
+
 
 </body>
 
