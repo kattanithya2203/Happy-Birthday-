@@ -334,7 +334,7 @@ transform:rotateX(180deg);
 
 .panel-1 h1{
 font-family:'Caveat',cursive;
-font-size:38px;
+font-size:36px;
 line-height:1.2;
 max-width:90%;
 }
@@ -353,6 +353,10 @@ background:#d98b7b;
 color:white;
 cursor:pointer;
 font-size:15px;
+}
+
+.panel-1.open{
+transform:rotateX(180deg);
 }
 
 .panel-2{
