@@ -302,11 +302,34 @@ overflow-y:auto;
 .panel::-webkit-scrollbar-thumb{ background:rgba(0,0,0,.15); border-radius:4px; }
 
 .panel-1{
-position:relative;
+position:absolute;
+top:0;
+left:0;
 z-index:4;
 border-radius:16px 16px 3px 3px;
 box-shadow:0 15px 40px rgba(0,0,0,.18);
-gap:16px;
+transform-origin:bottom center;
+transform-style:preserve-3d;
+transition:transform 1s ease;
+}
+
+.panel-1-front,
+.panel-1-inside{
+position:absolute;
+inset:0;
+background:#fffdfb;
+padding:24px 22px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+backface-visibility:hidden;
+border-radius:16px 16px 3px 3px;
+}
+
+.panel-1-inside{
+transform:rotateX(180deg);
 }
 
 .panel-1 h1{
