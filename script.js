@@ -33,8 +33,7 @@ function openEnvelope(){
         setTimeout(() => {
             letterWrap.classList.add("rising");
             envelopeWrap.classList.add("recede");
-            decorations.classList.add("hide");
-        }, 350);
+
 
         // step 3: once the letter has finished rising, tidy up the envelope
         letterWrap.addEventListener("transitionend", function onLetterOut(ev){
