@@ -385,3 +385,8 @@ height:145px;
 }
 
 }
+
+
+.card-front.open{
+transform:rotateY(-160deg);
+}
