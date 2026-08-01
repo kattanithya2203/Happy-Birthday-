@@ -1,73 +1,44 @@
 function openEnvelope(){
 
+    // Play music
     const music = document.getElementById("bg-music");
 
     if(music){
-        music.play().catch(()=>{
+        music.play().catch(() => {
             console.log("Music needs user interaction");
         });
     }
 
 
-    const flap = document.querySelector(".envelope-flap");
-    const seal = document.querySelector(".wax-seal");
-    const envelope = document.querySelector(".envelope-wrap");
-    const letter = document.querySelector(".letter-wrap");
+    // hide envelope
+    const envelope = document.getElementById("envelope-screen");
+
+    envelope.style.display = "none";
 
 
-    // seal disappears
-    seal.style.opacity = "0";
+    // show card
+    const card = document.getElementById("card-screen");
 
-
-    // envelope flap opens
-    flap.classList.add("open");
-
-
-
-    // wait for flap animation, then card comes out
-    setTimeout(()=>{
-
-        letter.classList.add("show");
-
-    },1000);
-
-
-
-    // envelope fades after card comes out
-    setTimeout(()=>{
-
-        envelope.classList.add("hide");
-
-    },2200);
+    card.style.display = "flex";
 
 }
 
 
 
 
-
 function openCard(){
 
-    const panel1 = document.querySelector(".panel-1");
-    const panel3 = document.querySelector(".panel-3");
-    const button = document.querySelector(".open-card");
+    const front = document.querySelector(".card-front");
+
+    const pages = document.querySelector(".book-card");
 
 
-    button.style.opacity="0";
-    button.style.pointerEvents="none";
+    // hide front cover
+    front.style.display = "none";
 
 
+    // show inside pages
+    pages.style.display = "block";
 
-    // first panel goes upward
-    panel1.classList.add("open");
-
-
-
-    // after panel 1 opens, bottom panel folds down
-    setTimeout(()=>{
-
-        panel3.classList.add("open");
-
-    },1300);
 
 }
