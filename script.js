@@ -33,12 +33,13 @@ function openCard(){
     const pages = document.querySelector(".book-card");
 
 
-    // hide front cover
-    front.style.display = "none";
+    // flip front cover
+    front.classList.add("open");
 
 
     // show inside pages
-    pages.style.display = "block";
-
+    setTimeout(() => {
+        pages.style.display = "block";
+    }, 500);
 
 }
