@@ -3,67 +3,71 @@ function openEnvelope(){
     const music = document.getElementById("bg-music");
 
     if(music){
-        music.play().catch(() => {
+        music.play().catch(()=>{
             console.log("Music needs user interaction");
         });
     }
 
-    const envelope = document.querySelector(".envelope");
-    const envelopeWrap = document.querySelector(".envelope-wrap");
+
     const flap = document.querySelector(".envelope-flap");
     const seal = document.querySelector(".wax-seal");
-    const tapText = document.querySelector(".tap-text");
-    const letterWrap = document.querySelector(".letter-wrap");
+    const envelope = document.querySelector(".envelope-wrap");
+    const letter = document.querySelector(".letter-wrap");
 
-    envelope.classList.add("opening");
-    seal.classList.add("hide");
-    tapText.style.opacity = "0";
 
+    // seal disappears
+    seal.style.opacity = "0";
+
+
+    // envelope flap opens
     flap.classList.add("open");
 
 
-    flap.addEventListener("transitionend", function onFlapOpen(e){
 
-        if(e.propertyName !== "transform") return;
+    // wait for flap animation, then card comes out
+    setTimeout(()=>{
 
-        letterWrap.classList.add("peek");
+        letter.classList.add("show");
 
-
-        setTimeout(() => {
-
-            letterWrap.classList.add("rising");
-
-            envelopeWrap.classList.add("recede");
-
-        }, 500);
+    },1000);
 
 
-        letterWrap.addEventListener("transitionend", function onLetterOut(ev){
 
-            if(ev.propertyName !== "transform") return;
+    // envelope fades after card comes out
+    setTimeout(()=>{
 
-            envelopeWrap.style.display = "none";
+        envelope.classList.add("hide");
 
-        }, { once:true });
-
-
-    }, { once:true });
+    },2200);
 
 }
 
 
 
 
+
 function openCard(){
 
+    const panel1 = document.querySelector(".panel-1");
+    const panel3 = document.querySelector(".panel-3");
     const button = document.querySelector(".open-card");
-    const letterWrap = document.querySelector(".letter-wrap");
-
-    button.disabled = true;
-    button.style.opacity = "0";
-    button.style.pointerEvents = "none";
 
 
-    letterWrap.classList.add("unfolded");
+    button.style.opacity="0";
+    button.style.pointerEvents="none";
+
+
+
+    // first panel goes upward
+    panel1.classList.add("open");
+
+
+
+    // after panel 1 opens, bottom panel folds down
+    setTimeout(()=>{
+
+        panel3.classList.add("open");
+
+    },1300);
 
 }
