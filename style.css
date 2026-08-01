@@ -251,8 +251,7 @@ transition:opacity .3s ease;
 
 /* ---- letter (starts tucked inside the envelope, then rises + grows) ---- */
 
-.letter-wrap{
---panel-h: 380px;
+--panel-h: 500px;
 position:absolute;
 top:50%;
 left:50%;
