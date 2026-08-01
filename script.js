@@ -50,24 +50,21 @@ function openEnvelope(){
 function openCard(){
 
     const button = document.querySelector(".open-card");
-    const letterWrap = document.querySelector(".letter-wrap");
-    const panel2 = document.querySelector(".panel-2");
+    const panel1 = document.querySelector(".panel-1");
     const panel3 = document.querySelector(".panel-3");
+    const letterWrap = document.querySelector(".letter-wrap");
 
     button.disabled = true;
     button.style.opacity = "0";
     button.style.pointerEvents = "none";
 
     letterWrap.classList.add("unfolded");
-    panel2.classList.add("open");
 
-    panel2.addEventListener("transitionend", function onPanel2Open(e){
-        if(e.propertyName !== "transform") return;
-        panel2.removeEventListener("transitionend", onPanel2Open);
+    // Step 1: Front cover (Panel 1) flips upward
+    panel1.classList.add("open");
 
-        setTimeout(() => {
-            panel3.classList.add("open");
-        }, 200);
-
-    }, { once: true });
+    // Step 2: After Panel 1 opens, bottom panel folds down
+    setTimeout(() => {
+        panel3.classList.add("open");
+    }, 1200);
 }
