@@ -27,198 +27,113 @@
 <div class="paper-bg">
 
 
-<!-- Fairy lights -->
+<div class="decorations">
 
-<div class="fairy-lights">
-<span>•</span><span>•</span><span>•</span><span>•</span><span>•</span>
-</div>
+    <div class="fairy-lights">
+    <span>•</span><span>•</span><span>•</span><span>•</span><span>•</span>
+    </div>
 
+    <div class="doodle doodle1">♡ ✦</div>
+    <div class="doodle doodle2">☆ ♡</div>
+    <div class="doodle doodle3">✧ ♥</div>
 
+    <div class="leaf leaf1">🍂</div>
+    <div class="leaf leaf2">🍂</div>
 
-<!-- Scrapbook decorations -->
+    <div class="washi tape1"></div>
+    <div class="washi tape2"></div>
 
-<div class="doodle doodle1">♡ ✦</div>
-<div class="doodle doodle2">☆ ♡</div>
-<div class="doodle doodle3">✧ ♥</div>
+    <div class="polaroid photo1">
+    <div class="tape"></div>
+    <img src="photo1.jpg" alt="Memory">
+    </div>
 
-<div class="leaf leaf1">🍂</div>
-<div class="leaf leaf2">🍂</div>
-
-<div class="washi tape1"></div>
-<div class="washi tape2"></div>
-
-
-<!-- Polaroid memories -->
-
-<div class="polaroid photo1">
-<div class="tape"></div>
-<img src="photo1.jpg" alt="Memory">
-</div>
-
-
-<div class="polaroid photo2">
-<div class="tape"></div>
-<img src="photo2.jpg" alt="Memory">
-</div>
-
-
-
-
-<!-- Envelope -->
-
-<section id="envelope-screen">
-
-
-<div class="envelope">
-
-
-<div class="envelope-flap"></div>
-
-
-<button class="wax-seal" onclick="openEnvelope()">
-❤️
-</button>
-
+    <div class="polaroid photo2">
+    <div class="tape"></div>
+    <img src="photo2.jpg" alt="Memory">
+    </div>
 
 </div>
 
 
-<p class="tap-text">
-Tap to open the envelope
-</p>
+<!-- Scene: envelope opens, letter rises out of it and grows into the card,
+     envelope fades into the background behind it -->
 
+<section id="scene">
 
-</section>
+    <div class="envelope-wrap">
 
-
-
-
-
-<!-- Card -->
-
-<section id="card-screen">
-
-
-<div class="card-container">
-
-
-<!-- Front cover -->
-
-<div class="card-front">
-
-    <div class="front-cover">
-
-        <h1>
-            Happy Birthday Babyy❤️🫂
-        </h1>
-
-        <div class="front-doodles">
-            ♡ ✦ ♡
+        <div class="envelope">
+            <div class="envelope-back"></div>
+            <div class="envelope-flap"></div>
+            <button class="wax-seal" onclick="openEnvelope()" aria-label="Open envelope">
+                ❤️
+            </button>
         </div>
 
-        <button class="open-card" onclick="openCard()">
-            Tap to open the card
-        </button>
+        <p class="tap-text">
+            Tap to open the envelope
+        </p>
 
     </div>
 
-</div>
 
+    <div class="letter-wrap">
 
+        <div class="panel panel-1">
+            <h1>Happy Birthday Babyy❤️🫂</h1>
+            <div class="front-doodles">♡ ✦ ♡</div>
+            <button class="open-card" onclick="openCard()">
+                Tap to open
+            </button>
+        </div>
 
+        <div class="panel panel-2">
+            <div class="page-doodles">♡ ✧</div>
+            <h2 class="letter-title">Dear Daddy 😂,</h2>
+            <p>
+                I still can't believe I get to do something special for your birthday this time 😋.
+                I just want your day to be full of happiness and love.
+                <br><br>
+                I'm falling harder ra.. First time bey, I am loving you a little more every single day and I mean it!!
+                Nenu nik gurthochina prathi sari, just know that I must be listening to you in my gallery.
+                <br><br>
+                I miss you and I am really sorry.. I hope I'll be the version you deserve one day.
+            </p>
 
+            <div class="panel-2-inner">
 
-<!-- Inside pages -->
+                <div class="panel panel-3">
+                    <div class="page-doodles">♡ ✨</div>
+                    <p>
+                        Happy 18th kondaa💗<br>
+                        Keep giggling idiott!<br><br>
 
-<div class="book-card">
+                        I love you more than you think I do ❤️<br>
+                        And I love you more than you could ever love me. 😏😂<br><br>
 
-    <div class="pages-wrapper">
+                        You'll always be my shooting star ☄️
+                        and my snowflake ❄️.
+                    </p>
 
+                    <div class="letter-signature">
+                        <p>To my Ashrith 💝</p>
+                        <span>— Pinkyy 🐽</span>
+                    </div>
+                </div>
 
+            </div>
 
-<div class="page left-page">
+        </div>
 
-<div class="page-doodles">
-♡ ✧
-</div>
-
-<h2 class="letter-title">
-Dear Daddy 😂,
-</h2>
-
-<p>
-I still can’t believe I get to do something special for your birthday this time 😋.
-I just want your day to be full of happiness and love.
-</p>
-
-</div>
-
-
-
-
-<div class="page right-page">
-
-
-<div class="page-doodles">
-✦ ♡
-</div>
-
-
-<p>
-I'm falling harder ra..   
-First time bey, I am loving you a little more every single day and I mean it!!
-
-Nenu nik gurthochina prathi sari, just know that I must be listening to you in my gallery.
-
-I miss you and I am really sorry.. I hope I'll be the version you deserve one day.
-</p>
-
-
-</div>
-
-
-
-
-<div class="page final-page">
-
-    <div class="page-doodles">
-        ♡ ✨
     </div>
-
-    <p>
-        Happy 18th kondaa💗<br>
-        Keep giggling idiott!<br><br>
-
-        I love you more than you think I do ❤️<br>
-        And I love you more than you could ever love me. 😏😂<br><br>
-
-        You'll always be my shooting star ☄️
-        and my snowflake ❄️.
-    </p>
-
-    <div class="letter-signature">
-        <p>To my Ashrith 💝</p>
-        <span>— Pinkyy 🐽</span>
-    </div>
-
-</div>
-
-</div> <!-- pages-wrapper -->
-
-</div>
-
-
-</div>
-
 
 </section>
 
-
-
+</div> <!-- paper-bg -->
 
 <script src="script.js"></script>
 
-
 </body>
 
-</html>
+</html>        
