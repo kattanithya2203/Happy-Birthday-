@@ -241,3 +241,181 @@ body{
 .tap-text{
     margin-top:25px;
 }
+/* CARD / LETTER */
+
+.letter-wrap{
+    position:absolute;
+    width:360px;
+    height:500px;
+    opacity:0;
+    transform:translateY(80px) scale(.5);
+    transition:1.2s ease;
+    perspective:2000px;
+    z-index:10;
+}
+
+
+.letter-wrap.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
+}
+
+
+
+.card-container{
+    width:360px;
+    height:500px;
+    position:relative;
+    transform-style:preserve-3d;
+}
+
+
+
+/* COMMON PANEL */
+
+.panel{
+    width:360px;
+    height:165px;
+    position:absolute;
+    left:0;
+    background:#fffdfb;
+    padding:22px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-size:14px;
+    line-height:1.6;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+
+
+/* PANEL 1 FRONT + BACK */
+
+.panel-1{
+    top:0;
+    z-index:3;
+    transform-origin:bottom;
+    transform-style:preserve-3d;
+    transition:transform 1.2s ease;
+}
+
+
+.panel-1.open{
+    transform:rotateX(-180deg);
+}
+
+
+.panel-face{
+    position:absolute;
+    inset:0;
+    padding:22px;
+    background:#fffdfb;
+    backface-visibility:hidden;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+
+.inside-face{
+    transform:rotateX(180deg);
+}
+
+
+
+.front-face h1{
+    font-family:'Caveat',cursive;
+    font-size:38px;
+    line-height:1.2;
+}
+
+
+
+.front-doodles,
+.page-doodles{
+    color:#d28c86;
+    font-size:24px;
+}
+
+
+
+.open-card{
+    margin-top:15px;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:#d98b7b;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+}
+
+
+
+/* PANEL 2 STATIONARY */
+
+.panel-2{
+    top:165px;
+    z-index:2;
+}
+
+
+
+/* PANEL 3 OPENS DOWN */
+
+.panel-3{
+    top:330px;
+    z-index:1;
+    transform-origin:top;
+    transform:rotateX(90deg);
+    transition:transform 1.2s ease;
+}
+
+
+.panel-3.open{
+    transform:rotateX(0deg);
+}
+
+
+
+.letter-title{
+    font-family:'Caveat',cursive;
+    font-size:30px;
+}
+
+
+
+.letter-signature{
+    margin-top:15px;
+    font-family:'Caveat',cursive;
+    font-size:24px;
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .envelope{
+        width:270px;
+        height:170px;
+    }
+
+
+    .letter-wrap,
+    .card-container,
+    .panel{
+        width:330px;
+    }
+
+
+    .front-face h1{
+        font-size:32px;
+    }
+
+}
