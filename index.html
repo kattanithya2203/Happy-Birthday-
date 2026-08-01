@@ -17,11 +17,9 @@
 
 <body>
 
-
 <audio id="bg-music" loop>
-<source src="barbaad-bgm.MP3" type="audio/mpeg">
+    <source src="barbaad-bgm.MP3" type="audio/mpeg">
 </audio>
-
 
 
 <div class="paper-bg">
@@ -30,73 +28,121 @@
 <div class="decorations">
 
     <div class="fairy-lights">
-    <span>•</span><span>•</span><span>•</span><span>•</span><span>•</span>
+        <span>•</span>
+        <span>•</span>
+        <span>•</span>
+        <span>•</span>
+        <span>•</span>
     </div>
+
 
     <div class="doodle doodle1">♡ ✦</div>
     <div class="doodle doodle2">☆ ♡</div>
     <div class="doodle doodle3">✧ ♥</div>
 
+
     <div class="leaf leaf1">🍂</div>
     <div class="leaf leaf2">🍂</div>
 
-    <div class="washi tape1"></div>
-    <div class="washi tape2"></div>
+
+    <div class="tape tape1"></div>
+    <div class="tape tape2"></div>
+
 
     <div class="polaroid photo1">
-    <div class="tape"></div>
-    <img src="photo1.jpg" alt="Memory">
+        <div class="photo-tape"></div>
+        <img src="photo1.jpg">
     </div>
 
+
     <div class="polaroid photo2">
-    <div class="tape"></div>
-    <img src="photo2.jpg" alt="Memory">
+        <div class="photo-tape"></div>
+        <img src="photo2.jpg">
     </div>
 
 </div>
 
 
-<!-- Scene: envelope opens, letter rises out of it and grows into the card,
-     envelope fades into the background behind it -->
 
 <section id="scene">
 
-    <div class="envelope-wrap">
 
-        <div class="envelope">
-            <div class="envelope-back"></div>
-            <div class="envelope-flap"></div>
-            <button class="wax-seal" onclick="openEnvelope()" aria-label="Open envelope">
-                ❤️
-            </button>
-        </div>
+<!-- ENVELOPE -->
 
-        <p class="tap-text">
-            Tap to open the envelope
-        </p>
+<div class="envelope-wrap">
+
+    <div class="envelope">
+
+        <div class="envelope-back"></div>
+
+        <div class="envelope-flap"></div>
+
+        <button class="wax-seal" onclick="openEnvelope()">
+            ❤️
+        </button>
 
     </div>
 
 
-    <div class="letter-wrap">
+    <p class="tap-text">
+        Tap to open the envelope
+    </p>
 
-        <div class="panel panel-1">
+</div>
 
-    <div class="panel-1-front">
-        <h1>Happy Birthday Babyy❤️🫂</h1>
-        <div class="front-doodles">♡ ✦ ♡</div>
+
+
+
+
+<!-- CARD -->
+
+<div class="letter-wrap">
+
+
+<div class="card-container">
+
+
+
+<!-- PANEL 1 -->
+
+<div class="panel panel-1">
+
+
+    <!-- FRONT COVER -->
+
+    <div class="panel-face front-face">
+
+        <h1>
+            Happy Birthday Babyy ❤️🫂
+        </h1>
+
+
+        <div class="front-doodles">
+            ♡ ✦ ♡
+        </div>
+
 
         <button class="open-card" onclick="openCard()">
             Tap to open
         </button>
+
     </div>
 
 
-    <div class="panel-1-inside">
 
-        <div class="page-doodles">♡ ✧</div>
+    <!-- INSIDE OF PANEL 1 -->
 
-        <h2 class="letter-title">Dear Daddy 😂,</h2>
+    <div class="panel-face inside-face">
+
+        <div class="page-doodles">
+            ♡ ✧
+        </div>
+
+
+        <h2 class="letter-title">
+            Dear Daddy 😂,
+        </h2>
+
 
         <p>
             I still can't believe I get to do something special for your birthday this time 😋.
@@ -105,54 +151,104 @@
 
     </div>
 
-        </div>
 
-        <div class="panel panel-2">
-            <div class="page-doodles">♡ ✧</div>
-            <h2 class="letter-title">Dear Daddy 😂,</h2>
-            <p>
-                I still can't believe I get to do something special for your birthday this time 😋.
-                I just want your day to be full of happiness and love.
-                <br><br>
-                I'm falling harder ra.. First time bey, I am loving you a little more every single day and I mean it!!
-                Nenu nik gurthochina prathi sari, just know that I must be listening to you in my gallery.
-                <br><br>
-                I miss you and I am really sorry.. I hope I'll be the version you deserve one day.
-            </p>
+</div>
 
-            <div class="panel-2-inner">
 
-                <div class="panel panel-3">
-                    <div class="page-doodles">♡ ✨</div>
-                    <p>
-                        Happy 18th kondaa💗<br>
-                        Keep giggling idiott!<br><br>
 
-                        I love you more than you think I do ❤️<br>
-                        And I love you more than you could ever love me. 😏😂<br><br>
 
-                        You'll always be my shooting star ☄️
-                        and my snowflake ❄️.
-                    </p>
 
-                    <div class="letter-signature">
-                        <p>To my Ashrith 💝</p>
-                        <span>— Pinkyy 🐽</span>
-                    </div>
-                </div>
+<!-- PANEL 2 -->
 
-            </div>
+<div class="panel panel-2">
 
-        </div>
+    <div class="page-doodles">
+        ♡ ✧
+    </div>
+
+
+    <p>
+
+        I'm falling harder ra.. First time bey, I am loving you a little more every single day and I mean it!!
+
+        <br><br>
+
+        Nenu nik gurthochina prathi sari, just know that I must be listening to you in my gallery.
+
+        <br><br>
+
+        I miss you and I am really sorry.. I hope I'll be the version you deserve one day.
+
+    </p>
+
+</div>
+
+
+
+
+
+<!-- PANEL 3 -->
+
+<div class="panel panel-3">
+
+
+    <div class="page-doodles">
+        ♡ ✨
+    </div>
+
+
+    <p>
+
+        Happy 18th kondaa💗
+
+        <br><br>
+
+        Keep giggling idiott!
+
+        <br><br>
+
+        I love you more than you think I do ❤️
+
+        <br><br>
+
+        And I love you more than you could ever love me. 😏😂
+
+        <br><br>
+
+        You'll always be my shooting star ☄️
+        and my snowflake ❄️.
+
+    </p>
+
+
+    <div class="letter-signature">
+
+        To my Ashrith 💝
+
+        <br>
+
+        — Pinkyy 🐽
 
     </div>
 
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
 </section>
 
-</div> <!-- paper-bg -->
+
+</div>
+
 
 <script src="script.js"></script>
 
 </body>
 
-</html>        
+</html>
