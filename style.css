@@ -361,10 +361,7 @@ transform:rotateX(180deg);
 
 .panel-2{
 top:var(--panel-h);
-transform-origin:top;
-transform:rotateX(180deg);
-transition:transform 1s ease;
-transform-style:preserve-3d;
+transform:none;
 z-index:3;
 border-radius:3px;
 box-shadow:0 10px 30px rgba(0,0,0,.14);
@@ -373,43 +370,39 @@ box-shadow:0 10px 30px rgba(0,0,0,.14);
 .panel-2::before{
 content:"";
 position:absolute;
-top:0; left:0; right:0;
+top:0;
+left:0;
+right:0;
 height:8px;
 background:linear-gradient(to bottom, rgba(0,0,0,.10), transparent);
 }
 
-.panel-2.open{
-transform:rotateX(0deg);
-}
 
-.panel-2-inner{
-position:absolute;
-inset:0;
-transform-style:preserve-3d;
-}
+/* Bottom panel folds downward */
 
 .panel-3{
-top:var(--panel-h);
-transform-origin:top;
-transform:rotateX(180deg);
+top:calc(var(--panel-h) * 2);
+transform-origin:top center;
+transform:rotateX(90deg);
 transition:transform 1s ease;
 z-index:2;
 border-radius:3px 3px 16px 16px;
 box-shadow:0 10px 30px rgba(0,0,0,.14);
 }
 
-.panel-3::before{
-content:"";
-position:absolute;
-top:0; left:0; right:0;
-height:8px;
-background:linear-gradient(to bottom, rgba(0,0,0,.10), transparent);
-}
-
 .panel-3.open{
 transform:rotateX(0deg);
 }
 
+.panel-3::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:8px;
+background:linear-gradient(to bottom, rgba(0,0,0,.10), transparent);
+}
 .page-doodles{
 font-size:24px;
 color:#d28c86;
